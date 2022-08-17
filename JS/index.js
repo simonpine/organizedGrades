@@ -1,21 +1,30 @@
-let iva = 1.25;
+const pais = prompt("De que pais eres").toLocaleLowerCase().trim();
+console.log(pais)
+let conver;
 
-let gasto1 = prompt("ingrese cuanto dinero gasto en los primero 15 dias de este mes");
-let gasto2 = prompt("ingrese cuanto dinero gasto en la segunda mitad de este mes");
-
-let gastot = Number(gasto1) + Number(gasto2);
-
-console.log(gastot);
-
-let gastoim = gastot * iva;
-
-alert("tu gasto final sera de " + gastoim);
-
-const gastoi = gasto1 ==gasto2;
-
-if(gastoi){
-    alert("eres un cerdo");
+if(pais == "colombia")[
+    conver = 4147
+]
+else if(pais == "argentina")[
+    conver = 135
+]
+else if(pais == "chile")[
+    conver = 881
+]
+else{
+    alert("no tengo ni idea de donde sos");
+}
+let dinero = Number(prompt("cuanto dinero (en dolares) quieres pasar a tu moneda"));
+if (dinero > 1000){
+    alert("no creo que tengas tanto dinero");
+}
+else if (dinero < 10){
+    alert("no seas tan pobre");
 }
 else{
-    alert("me caes bien");
+    let final = (conver * dinero);
+    alert("el dinero que ingresaste es igual a: " + final + " pesos de " + pais);
 }
+//strings pro
+// === tipo de dato igual (tambien)
+// isNaN == no es un numero
