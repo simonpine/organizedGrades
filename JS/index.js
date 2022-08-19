@@ -2,6 +2,7 @@
 // console.log(pais)
 // let conver;
 
+
 // if(pais == "colombia")[
 //     conver = 4147
 // ]
@@ -39,3 +40,29 @@
 // brake == detener el bucle
 // continue == saltarse ese paso
 // parseInt == convertir un string en Number
+// isNaN es para saber si es diferente a un numero
+
+/*-----------------------------------------------------------Primer entregable-----------------------------*/
+
+/*--------------------------Idea 1--------------------------*/
+let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
+let num = isNaN(vecesHola)
+console.log(num)
+for(let i = 0; ; i++){
+    console.log(i + " hola");
+    if (num){
+        break;
+    }
+    else if(vecesHola < 0){
+        break;
+    }
+    else if(i == vecesHola){
+        break;
+    }
+}
+if(num){
+    alert("no se dijo hola ni una ves")
+}
+else{
+    alert("se dijo hola " + vecesHola + " veces")
+}
