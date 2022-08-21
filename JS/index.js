@@ -44,15 +44,12 @@
 let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
 let num = isNaN(vecesHola)
 console.log(num)
-for(let i = 0; ; i++){
+for(let i = 0; i <= vecesHola ; i++){
     console.log(i + " hola");
     if (num){
         break;
     }
     else if(vecesHola < 0){
-        break;
-    }
-    else if(i == vecesHola){
         break;
     }
 }
