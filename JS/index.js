@@ -1,4 +1,6 @@
 
+/*-----------------------------------------------------------Primer entregable-----------------------------*/
+
 /*--------------------------Idea 1--------------------------*/
 let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
 let num = isNaN(vecesHola)
@@ -62,3 +64,5 @@ do{
             console.log('esa opcion no es valida')
             break;
     }
+
+alert("Listo!! tu mascota fue registrada, se llama " + nombre + " y su genero " + genero)
