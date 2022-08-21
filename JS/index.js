@@ -1,6 +1,4 @@
 
-/*-----------------------------------------------------------Primer entregable-----------------------------*/
-
 /*--------------------------Idea 1--------------------------*/
 let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
 let num = isNaN(vecesHola)
@@ -23,7 +21,6 @@ if(num){
 else{
     alert("se dijo hola " + vecesHola + " veces")
 }
-/*--------------------------Idea 2--------------------------*/
 
 let nombre = prompt("Ingresa el nombre de tu nueva mascota");
 let nombre1 = !isNaN(nombre);
@@ -65,7 +62,3 @@ do{
             console.log('esa opcion no es valida')
             break;
     }
-}while((opciones !== "4"))
-console.log(genero)
-
-alert("Listo!! tu mascota fue registrada, se llama " + nombre + " y su genero " + genero)
