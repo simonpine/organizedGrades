@@ -1,9 +1,9 @@
 /*-----------------------------------------------------------Primer entregable-----------------------------*/
 
 /*--------------------------Idea 1--------------------------*/
-// let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
-// let num = isNaN(vecesHola)
-// console.log(num)
+// let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"));
+// let num = isNaN(vecesHola);
+// console.log(num);
 // for(let i = 0; ; i++){
 //     console.log(i + " hola");
 //     if (num){
@@ -17,30 +17,30 @@
 //     }
 // }
 // if(num){
-//     alert("no se dijo hola ni una ves")
+//     alert("no se dijo hola ni una ves");
 // }
 // else{
-//     alert("se dijo hola " + vecesHola + " veces")
+//     alert("se dijo hola " + vecesHola + " veces");
 // }
 /*--------------------------Idea 1 (pero con unos cambios)--------------------------*/
-let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"))
-let num = isNaN(vecesHola)
-console.log(num)
-for(let i = 0; i <= vecesHola ; i++){
-    console.log(i + " hola");
-    if (num){
-        break;
-    }
-    else if(vecesHola < 0){
-        break;
-    }
-}
-if(num){
-    alert("no se dijo hola ni una ves")
-}
-else{
-    alert("se dijo hola " + vecesHola + " veces")
-}
+// let vecesHola = Number(prompt("cuantas veces quieres que te diga hola?"));
+// let num = isNaN(vecesHola);
+// console.log(num);
+// for(let i = 0; i <= vecesHola ; i++){
+//     console.log(i + " hola");
+//     if (num){
+//         break;
+//     }
+//     else if(vecesHola < 0){
+//         break;
+//     }
+// }
+// if(num){
+//     alert("no se dijo hola ni una ves");
+// }
+// else{
+//     alert("se dijo hola " + vecesHola + " veces");
+// }
 /*--------------------------Idea 2--------------------------*/
 
 // let nombre = prompt("Ingresa el nombre de tu nueva mascota");
