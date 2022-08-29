@@ -8,6 +8,16 @@ while(est1){
   est1 = isNaN(numeroEstudiantes)
 }
 console.log(numeroEstudiantes)
+//Preguto con cuanto se apruba para saber que notas fueron aprobadas
+var numeroAprobar= Number(prompt("Con cuanto se apruban las notas?"))
+let na = isNaN(numeroAprobar)
+console.log(na)
+while(na){
+  numeroAprobar= Number(prompt("El dato ingresado no es valido"))
+  na = isNaN(numeroAprobar)
+}
+console.log(numeroAprobar)
+
 // ahora creo la base para crear los objetos estudiantes y creo el metodo para saber su nota final
 class Estudiante{
   constructor(name, grade1, grade2, grade3, grade4, grade5){
@@ -24,7 +34,7 @@ class Estudiante{
     console.table(this.nota)
     let nf = ((this.nota.nota1 + this.nota.nota2 + this.nota.nota3 + this.nota.nota4 + this.nota.nota5) / 5);
     console.log("La nota final de " + this.nombre + " es " + nf)
-    if(nf >= 3){
+    if(nf >= numeroAprobar){
       console.log("El estudiante " + this.nombre + " aprobo el semestre")
     }
     else{
@@ -69,7 +79,7 @@ for(let i = 1; i <= numeroEstudiantes; i++ ){
   const estudiante = new Estudiante(nombreEstudiente, gr1, gr2, gr3, gr4, gr5);
     // Ahora creo un bucle para saber exactamente que notas fuero aprobadas y cuales no
   for (prop in estudiante.nota){
-      if(estudiante.nota[prop] >= 3){
+      if(estudiante.nota[prop] >= numeroAprobar){
         console.log("Esta nota fue aprobada: " + prop)
       }
   }
