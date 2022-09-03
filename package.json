@@ -1,0 +1,24 @@
+{
+  "name": "Estudios Organizados",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass",
+    "sass:watch": "sass --watch scss/main.scss  css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonpine/proyecto-de-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonpine/proyecto-de-JS/issues"
+  },
+  "homepage": "https://github.com/simonpine/proyecto-de-JS#readme",
+  "dependencies": {
+    "sass": "^1.54.8"
+  }
+}

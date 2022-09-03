@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;900&display=swap');
+// font-family: 'Montserrat Alternates', sans-serif;
+$colors:(
+    'main':#2f2f2f,
+    'secu': #ffff,
+    'deta': #00ffff,
+    't':rgba(255, 255, 255, 0),
+);
+
+@mixin flex($flex_d, $al_c, $ju_c, $al_i, $wr){
+    display: flex;
+    flex-direction: $flex_d;
+    align-content: $al_c;
+    align-items: $al_i;
+    justify-content: $ju_c;
+    flex-wrap: $wr;
+};
+*{
+    margin: 0;
+    padding: 0;
+    color: map-get($map:$colors, $key: 'secu');
+}
+html{
+    font-size: 62.5%;
+}
+img{
+    width: 35%;
+    height: auto;
+}
