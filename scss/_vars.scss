@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&family=Montserrat+Alternates:wght@100;300&display=swap');
 // font-family: 'Montserrat Alternates', sans-serif;
+// font-family: 'Exo 2', sans-serif;
 $colors:(
     'main':#2f2f2f,
     'secu': #ffff,
     'deta': #00ffff,
-    't':rgba(255, 255, 255, 0),
+    't':#2f2f2f9d,
 );
 
 @mixin flex($flex_d, $al_c, $ju_c, $al_i, $wr){
@@ -22,8 +23,15 @@ $colors:(
 }
 html{
     font-size: 62.5%;
+    background-color: map-get($map:$colors, $key: 'main');
+
 }
 img{
     width: 35%;
     height: auto;
+}
+.centro{
+    width: 100%;
+    height: 100vh;
+    @include flex(row-reverse, space-around, space-around, center, wrap);
 }

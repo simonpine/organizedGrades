@@ -1,0 +1,30 @@
+footer{
+    background-color: map-get($map:$colors, $key: 't');
+    @include flex(row, space-around, space-around, center, wrap);
+    width: 70%;
+    height: 90px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(4px);
+    & img{
+        width: 45px;
+        height: 45px;
+        margin: 0px 9px 0 9px;
+    }
+}
+#redes_sociales{
+    @include flex(row, space-around, space-between, center, wrap);
+}
+
+#copy{
+    @include flex(column, space-around, center, center, wrap);
+}
+.iconos_footer2{
+    width: 30px;
+    height: 30px;
+    vertical-align:middle;
+}
+.footerScript{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
+}
