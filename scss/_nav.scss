@@ -1,0 +1,26 @@
+nav{
+    margin-top: 20px;
+    width: 90vw;
+    position:sticky;
+    @include flex(row, center, space-evenly, center, wrap);
+}
+ul{
+    width:  100%;
+    @include flex(row, center, space-evenly, center, wrap);
+}
+li{
+    list-style:none;
+}
+.navT{
+    width: 60%;
+}
+.navText{
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-transform:uppercase;
+    font-weight: 300;
+}
+#logoNav{
+    width: 70px;
+}

@@ -1,3 +1,6 @@
+.mainBody{
+    @include flex(column, center, center, center, wrap)
+}
 .subtitulo{
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 24px;
@@ -8,6 +11,7 @@
 .hM{
     @include flex(row, center, space-evenly, center, wrap);
     height: 100vh;
+    width: 100%;
 }
 .sub_t{
     @include flex(column, space-around, space-around, center, wrap);

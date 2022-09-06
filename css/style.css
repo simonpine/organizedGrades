@@ -110,6 +110,15 @@ h1 {
   flex-wrap: wrap;
 }
 
+.mainBody {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .subtitulo {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 24px;
@@ -126,6 +135,7 @@ h1 {
   justify-content: space-evenly;
   flex-wrap: wrap;
   height: 100vh;
+  width: 100%;
 }
 
 .sub_t {
@@ -164,6 +174,48 @@ p {
   width: 70%;
   font-size: 33px;
   font-family: "Montserrat Alternates", sans-serif;
+}
+
+nav {
+  margin-top: 20px;
+  width: 90vw;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style: none;
+}
+
+.navT {
+  width: 60%;
+}
+
+.navText {
+  font-size: 30px;
+  text-decoration: none;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+#logoNav {
+  width: 70px;
 }
 
 footer {

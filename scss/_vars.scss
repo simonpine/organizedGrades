@@ -24,7 +24,6 @@ $colors:(
 html{
     font-size: 62.5%;
     background-color: map-get($map:$colors, $key: 'main');
-
 }
 img{
     width: 35%;
