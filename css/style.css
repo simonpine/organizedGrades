@@ -93,7 +93,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.more {
+.more, .more1 {
   margin-top: 20px;
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
@@ -107,7 +107,7 @@ h1 {
   background-size: 0px 100%;
   transition: 0.5s;
 }
-.more:hover {
+.more:hover, .more1:hover {
   color: #2f2f2f;
   transition: 0.5s;
   background-size: 100% 100%;
@@ -165,7 +165,7 @@ h1 {
   width: 150px;
 }
 
-.blur, .blur1 {
+.blur, .blur2, .blur1 {
   background-color: rgba(47, 47, 47, 0.6156862745);
   backdrop-filter: blur(4px);
   width: 400px;
@@ -181,6 +181,17 @@ h1 {
 
 .blur1 {
   width: 800px;
+}
+
+.blur2 {
+  backdrop-filter: blur(2px);
+  width: 35%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 p {
@@ -205,6 +216,27 @@ p {
 
 #aprove {
   background-color: rgb(100, 100, 78);
+}
+
+.input {
+  font-family: "Exo 2", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px 20px 10px 20px;
+  height: 20px;
+  width: 300px;
+  margin-top: 50px;
+  background: none;
+  border: 1px solid white;
+}
+
+.tituloMini {
+  width: 80%;
+  font-family: "Exo 2", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 38px;
+  text-align: justify;
 }
 
 nav {
@@ -256,6 +288,15 @@ ul {
 
 #logoNav {
   width: 70px;
+}
+
+.more1 {
+  margin-top: 0;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Exo 2", sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
 }
 
 footer, .footer1 {

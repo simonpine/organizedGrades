@@ -34,6 +34,12 @@
     @extend .blur;
     width: 800px;
 }
+.blur2{
+    @extend .blur;
+    backdrop-filter: blur(2px);
+    width: 35%;
+    @include flex(column-reverse, center, center, center, wrap);
+}
 p{
     text-align: justify;
     width: 70%;
@@ -49,4 +55,23 @@ p{
 }
 #aprove{
     background-color: rgb(100, 100, 78);
+}
+.input{
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
+    text-transform:uppercase;
+    padding: 10px 20px 10px 20px;
+    height: 20px;
+    width: 300px;
+    margin-top: 50px;
+    background: none;
+    border: 1px solid map-get($map:$colors, $key: 'secu');
+}
+.tituloMini{
+    width: 80%;
+    font-family: 'Exo 2', sans-serif;
+    text-transform:uppercase;
+    font-weight: 300;
+    font-size: 38px;
+    text-align: justify;
 }

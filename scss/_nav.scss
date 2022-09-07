@@ -34,3 +34,12 @@ ul{
 #logoNav{
     width: 70px;
 }
+.more1{
+    @extend .more;
+    margin-top:0;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    text-transform:uppercase;
+    font-weight: 100;
+}

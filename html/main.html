@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -24,39 +25,59 @@
             </p>
         </div>
     </header>
-    <nav>
-        <a href="../index.html">
-            <img src="../img/logo1.svg" alt="logo de simonPine" id="logoNav">
-        </a>
-        <ul>
-            <li>
-                <a href="#aprove" class="navText">aprove</a>
-            </li>
-            <li>
-                <a href="#studnets" class="navText">students</a>
-            </li>
-            <li>
-                <a href="#grades" class="navText">grades</a>
-            </li>
-        </ul>
-    </nav>
-    <main class="mainLet">
-        <section id="aprove" class="contenidos contenidosF1 baner">
-            <h3>
-                h
-            </h3>
-        </section>
-        <section id="studnets" class="contenidos contenidosF2 baner">
-            <h3>
-                h
-            </h3>
-        </section>
-        <section id="grades" class="contenidos contenidosF3 baner">
-            <h3>
-                h
-            </h3>
-        </section>
-    </main>
+        <form>
+            <nav>
+                <a href="../index.html">
+                    <img src="../img/logo1.svg" alt="logo de simonPine" id="logoNav">
+                </a>
+                <ul>
+                    <li>
+                        <a href="#aprove" class="navText">aprove</a>
+                    </li>
+                    <li>
+                        <a href="#studnets" class="navText">students</a>
+                    </li>
+                    <li>
+                        <a href="#grades" class="navText">grades</a>
+                    </li>
+                    <li>
+                        <input class="more1" name="sumbit" value="submit" type="submit">
+                    </li>
+                    <li>
+                        <a href="resultados.html" class="navText"  target="_blank">grade sheets</a>
+                    </li>
+                </ul>
+            </nav>
+            <main class="mainLet">
+                <section id="aprove" class="contenidos contenidosF1 baner">
+                    <div class="blur2">
+                        <p>With this information we can show you which students passed and which ones did not.</p>
+                    </div>
+                    <div class="blur2">
+                        <input type="number" class="input" value="numeroAprobar" placeholder=""> 
+                        <h2 class="tituloMini">write the grade to aprove</h2>
+                    </div>
+                </section>
+                <section id="studnets" class="contenidos contenidosF2 baner">
+                    <div class="blur2">
+                        <p>We will use this information to make our system flexible, because not all teachers have the same number of students.</p>
+                    </div>
+                    <div class="blur2">
+                        <input type="number" class="input" value="numeroNotas" placeholder=""> 
+                        <h2 class="tituloMini">write the number of students you had</h2>
+                    </div>
+                </section>
+                <section id="grades" class="contenidos contenidosF3 baner">
+                    <div class="blur2">
+                        <p>With this information we can vary how many grades there are and how much is divided for the final average.</p>
+                    </div>
+                    <div class="blur2">
+                        <input type="number" value="numeroNotas" class="input" placeholder=""> 
+                        <h2 class="tituloMini">write the number of grades you did take</h2>
+                    </div>
+                </section>
+            </main>
+        </form>
     <footer class="footer1">
         <section id="redes_sociales">
             <a href="https://www.instagram.com/simonpineda0521/" target="_blank">
@@ -82,6 +103,6 @@
             </div>
     </section>
     </footer>
-    <!-- <script src="../js/main.js"></script> -->
+    <script src="../js/main.js"></script>
 </body>
-</html>
+</html> 
