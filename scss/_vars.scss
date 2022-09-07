@@ -24,6 +24,7 @@ $colors:(
 html{
     font-size: 62.5%;
     background-color: map-get($map:$colors, $key: 'main');
+    scroll-behavior: smooth;
 }
 img{
     width: 35%;

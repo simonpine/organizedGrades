@@ -14,6 +14,7 @@ footer{
 }
 #redes_sociales{
     @include flex(row, space-around, space-between, center, wrap);
+    width: 300px;
 }
 
 #copy{
@@ -27,4 +28,8 @@ footer{
 .footerScript{
     font-family: 'Montserrat Alternates', sans-serif;
     font-weight: 300;
+}
+.footer1{
+    @extend footer ;
+    width: 100%;
 }
