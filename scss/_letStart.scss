@@ -75,14 +75,18 @@ p{
     font-size: 38px;
     text-align: justify;
 }
+td{
+    min-width: 200px;
+}
 .input1{
     @extend .input;
     margin-top: 0;
-    height: 100%;
-    width: 100%;
-    padding: 0;
+    padding: 3% 10% 3% 10%;
+    height: 80%;
+    width: 80%;
+    min-width: 150px;
 }
 .input1::placeholder{
     position: relative;
-    left: 30px;
+    left: 20px;
 }

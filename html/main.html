@@ -50,7 +50,7 @@
                 <p>With this information we can show you which students passed and which ones did not.</p>
             </div>
             <div class="blur2">
-                <input type="number" class="input" value="numeroAprobar" placeholder=""> 
+                <input type="number" class="input" value="numeroAprobar" id="numeroAprobar"> 
                 <h2 class="tituloMini">write the grade to aprove</h2>
             </div>
         </section>
@@ -59,7 +59,7 @@
                 <p>We will use this information to make our system flexible, because not all teachers have the same number of students.</p>
             </div>
             <div class="blur2">
-                <input type="number" class="input" value="numeroNotas" placeholder=""> 
+                <input type="number" class="input" value="numeroNotas" id="numeroEstudiantes"> 
                 <h2 class="tituloMini">write the number of students you had</h2>
             </div>
         </section>
@@ -68,16 +68,27 @@
                 <p>With this information we can vary how many grades there are and how much is divided for the final average.</p>
             </div>
             <div class="blur2">
-                <input type="number" value="numeroNotas" class="input" placeholder=""> 
+                <input type="number" value="numeroNotas" class="input" id="numeroNotas"> 
                 <h2 class="tituloMini">write the number of grades you did take</h2>
             </div>
         </section>
     </main>
-    <aside class="table" id="inputGrades">
+    <aside class="table out" id="inputGrades">
         <button class="more4" id="close">close</button>
         <a href="resultados.html" class="more5"  target="_blank">grade sheets</a>
-<div class="limit">
-            <table>
+        <div class="limit">
+            <table id="tr_th">
+                <!-- <tr>
+                    <th><input type="text" class="input1" placeholder="Nombre"></th>
+                    <td>pepe</td>
+                    <td>pepe</td>
+                    <th>pepe</th>
+                    <th>pepe</th>
+                    <th>Country</th>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
                 <tr>
                     <th><input type="text" class="input1" placeholder="Nombre"></th>
                     <td>Maria Anders</td>
@@ -88,9 +99,9 @@
                     <th>Company</th>
                     <th>Contact</th>
                     <th>Country</th>
-                </tr>
+                </tr> -->
             </table>
-</div class="limit">
+        </div>
     </aside>
     <footer class="footer1">
         <section id="redes_sociales">
@@ -117,7 +128,7 @@
             </div>
         </section>
     </footer>
-    <script src="../js/main.js"></script>
     <script src="../js/buttons.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html> 

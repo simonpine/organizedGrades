@@ -239,16 +239,21 @@ p {
   text-align: justify;
 }
 
+td {
+  min-width: 200px;
+}
+
 .input1 {
   margin-top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 0;
+  padding: 3% 10% 3% 10%;
+  height: 80%;
+  width: 80%;
+  min-width: 150px;
 }
 
 .input1::placeholder {
   position: relative;
-  left: 30px;
+  left: 20px;
 }
 
 nav {
@@ -322,6 +327,8 @@ ul {
   border: solid white 2px;
   overflow: hidden;
   backdrop-filter: blur(8px);
+  transition: 2s;
+  transition-timing-function: ease;
 }
 
 .hide {
@@ -331,7 +338,7 @@ ul {
 
 .limit {
   width: 100%;
-  height: 90%;
+  height: 80%;
   overflow: auto;
 }
 
@@ -375,6 +382,15 @@ tr:nth-child(even) {
 .more5 {
   left: 86%;
   top: 93%;
+}
+
+.out {
+  top: -100vh;
+  position: fixed;
+}
+
+th {
+  font-family: "Exo 2", sans-serif;
 }
 
 footer, .footer1 {

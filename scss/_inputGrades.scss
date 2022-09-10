@@ -10,6 +10,8 @@
     overflow: hidden;
     @extend .blur;
     backdrop-filter: blur(8px);
+    transition: 2s;
+    transition-timing-function: ease;
 }
 .hide{
     transition: 0.5s;
@@ -17,7 +19,7 @@
 }
 .limit{
     width: 100%;
-    height: 90%;
+    height: 80%;
     overflow: auto;
 }
 .limit::-webkit-scrollbar{
@@ -59,3 +61,10 @@ tr:nth-child(even) {
     left: 86%;
     top: 93%;
   }
+  .out{
+    top: -100vh;
+    position:fixed;
+}
+th{
+  font-family: 'Exo 2', sans-serif;
+}
