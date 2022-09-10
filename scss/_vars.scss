@@ -6,6 +6,7 @@ $colors:(
     'secu': #ffff,
     'deta': #00ffff,
     't':#2f2f2f9d,
+    'dark':rgba(22, 22, 22, 0.616),
 );
 
 @mixin flex($flex_d, $al_c, $ju_c, $al_i, $wr){

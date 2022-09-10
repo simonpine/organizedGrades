@@ -75,3 +75,14 @@ p{
     font-size: 38px;
     text-align: justify;
 }
+.input1{
+    @extend .input;
+    margin-top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+.input1::placeholder{
+    position: relative;
+    left: 30px;
+}

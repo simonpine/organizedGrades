@@ -1,6 +1,6 @@
 // El proyecto va a continuar por la linea de planilla de notas, pero ahora la cantidad de notas que fueron hechas puede ser escogida.
 //primero pido cuantos estudiantes tiene, Cuantas nota se sacaron y con cuanto se aprueba, y verifico que se digite un numero 
-var numeroEstudiantes= Number(prompt("Cuantos estudiantes tuviste?"));
+var numeroEstudiantes= Number();
 let est = isNaN(numeroEstudiantes);
 while(est){
   numeroEstudiantes= Number(prompt("El dato ingresado no es valido"));
@@ -8,15 +8,15 @@ while(est){
 }
 console.log("El numero de estudiantes que tuviste es: ", numeroEstudiantes);
 
-var numeroNotas= Number(prompt("Cuantas notas sacaste en este semestre?"));
+var numeroNotas= Number();
 let not = isNaN(numeroNotas);
 while(not){
-  numeroNotas= Number(prompt("El dato ingresado no es valido"));
+  numeroNotas= Number();
   not = isNaN(numeroNotas)
 }
 console.log("El numero de notas que se subiran a la pagina son: ", numeroNotas);
 
-var numeroAprobar= Number(prompt("Con cuanto se apruban las notas?"));
+var numeroAprobar= Number();
 let na = isNaN(numeroAprobar);
 while(na){
   numeroAprobar= Number(prompt("El dato ingresado no es valido"));
@@ -59,7 +59,7 @@ for (persona of estudiantes){//Tambien se podria usar "for (let i = 0, i < estud
 }
 console.log("la lista de estudiantes es: ")
 console.table(estudiantes)
-const aprobados = estudiantes.filter((a) => a.total > numeroAprobar)//filtro a los estudiantes aprobados y desaprobados
+const aprobados = estudiantes.filter((a) => a.total >= numeroAprobar)//filtro a los estudiantes aprobados y desaprobados
 const desaprobados = estudiantes.filter((b) => b.total < numeroAprobar)
 console.log("Los estudiantes que aprobaron son: ")
 console.table(aprobados)

@@ -1,0 +1,61 @@
+.table{
+    left: 5vw;
+    top: 5vh;
+    position:fixed;
+    z-index: 200;
+    height: 90vh;
+    width: 90vw;
+    background-color: map-get($map:$colors, $key: 'dark');
+    border: solid map-get($map:$colors, $key: 'secu') 2px;
+    overflow: hidden;
+    @extend .blur;
+    backdrop-filter: blur(8px);
+}
+.hide{
+    transition: 0.5s;
+    display: none;
+}
+.limit{
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+.limit::-webkit-scrollbar{
+    width: 10px;
+}
+.limit::-webkit-scrollbar-thumb{
+    background-color: map-get($map:$colors, $key: 'secu');
+}
+table {
+    position: relative;
+    top: 5%;
+    left: 3%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 30px;
+    border-collapse: collapse;
+    width: 94%;
+    height: 90%;
+    overflow: auto;
+  }
+  
+td, th {
+    border: 1px solid map-get($map:$colors, $key: 'secu');
+    padding: 8px;
+  }
+  
+tr:nth-child(even) {
+    background-color: map-get($map:$colors, $key: 'dark');
+  }
+  .more4{
+    margin-top: 0;
+    left: 91%;
+    top: 2.5%;
+    z-index: 100;
+    position: fixed;
+    @extend .more;
+  }
+  .more5{
+    @extend .more4;
+    left: 86%;
+    top: 93%;
+  }
