@@ -13,24 +13,25 @@ submit.addEventListener('click', () => grades.classList.remove('out'))//Con el b
 close.addEventListener('click', () => {
     grades.classList.add('out');//con esta funcion hago que con el boton close se agregue devuelta la clase out a la tabla para que se esconda, y borro todo lo que estaba escrito en ella
     tr_th.innerHTML = ``;
-    estudiantes = []//ademas hago que caundo se cierra la tabla el array de estudiantes se vacie, para que al salir y volver entrar no se sumen 2 tabalas
+    estudiantes = []//ademas hago que caundo se cierra la tabla el array de estudiantes se vacie el array estudiantes el canti (cantidades iniciales), para que al salir y volver se reinicie el array
+    canti = []
     console.table(estudiantes)
 })
-
-var cantiU = [] //creo el array Universal que contendra los 3 datos iniciales (numeroestudiante, numeroNotas, numeroAprobar)
-submit.addEventListener('click', get);//creo el evento cuando hacen click en el submit
-function get(){
-    var canti = []
+let canti = []
+function initial(){
     var numeroEstudiantes = document.querySelector("#numeroEstudiantes");
     var numeroNotas = document.querySelector("#numeroNotas");
     var numeroAprobar = document.querySelector("#numeroAprobar");
+    canti.push(Number(numeroAprobar.value), Number(numeroEstudiantes.value), Number(numeroNotas.value));
     for(a in canti){
-        if (canti[a] === ""){
-            canti[a] = 0
+        if (canti[a] < 1){
+            canti[a] = 1
         }
     }
-    canti.push(Number(numeroAprobar.value), Number(numeroEstudiantes.value), Number(numeroNotas.value));
-    cantiU.push(Number(numeroAprobar.value), Number(numeroEstudiantes.value), Number(numeroNotas.value));
+}
+submit.addEventListener('click', get);//creo el evento cuando hacen click en el submit
+    function get(){
+    initial();
     console.log(canti); //lo que hizo de aqui pa atras fue recopilar los datos que habian en las secciones (numero de estudiantes, notas y con cuanto se aprueba) y los metio en 2 arrays
     const up = document.createElement("tr");//creo la primera fila de la lista, donde va a ir el numero del estudiante
     const nombres = document.createElement("tr"); //agrego la segunda fila, ahi va a ir el nombre del estudiante
@@ -67,10 +68,11 @@ class estudiante{
 let gG = document.querySelector("#generateGrades");
 gG.addEventListener('click', gradeSheet);//defino que cuando le den al boton "generate grade sheets" meta todos el nombre y cada una de las notas de cada estudiante a un array (estudiantes)
 function gradeSheet(){
-    for(let i = 0; i < cantiU[1]; i++){
+    initial();
+    for(let i = 0; i < canti[1]; i++){
         const studentName = document.querySelector(`#nombre${i}`);
         const estudianteCreado = new estudiante(studentName.value);
-        for(let x = 0; x < cantiU[2]; x++){
+        for(let x = 0; x < canti[2]; x++){
             const nota = document.querySelector(`#nota${x}estudiante${i}`);
             estudianteCreado.nota.push(Number(nota.value));
         }
@@ -78,7 +80,7 @@ function gradeSheet(){
 
     }
     for (person of estudiantes){//Tambien se podria usar "for (let i = 0, i < estudiantes.lenght, i++)"
-        person.total = (person.nota.reduce((acumulador, elemento) => acumulador + elemento, 0)) / cantiU[2] //con esto se hace el promedio del estudiante
+        person.total = (person.nota.reduce((acumulador, elemento) => acumulador + elemento, 0)) / canti[2] //con esto se hace el promedio del estudiante
     }
     console.log("la lista de estudiantes es: ");
     console.table(estudiantes); //y por ultimo se muestra la tabla de estudiantes
