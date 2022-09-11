@@ -93,7 +93,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.more, .more4, .more5, .more1 {
+.more, .more4, .more6, .more5, .more1 {
   margin-top: 20px;
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
@@ -107,7 +107,7 @@ h1 {
   background-size: 0px 100%;
   transition: 0.5s;
 }
-.more:hover, .more4:hover, .more5:hover, .more1:hover {
+.more:hover, .more4:hover, .more6:hover, .more5:hover, .more1:hover {
   color: #2f2f2f;
   transition: 0.5s;
   background-size: 100% 100%;
@@ -221,7 +221,6 @@ p {
 .input, .input1 {
   font-family: "Exo 2", sans-serif;
   font-size: 20px;
-  text-transform: uppercase;
   padding: 10px 20px 10px 20px;
   height: 20px;
   width: 300px;
@@ -254,6 +253,14 @@ td {
 .input1::placeholder {
   position: relative;
   left: 20px;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(22, 22, 22, 0.616);
 }
 
 nav {
@@ -327,7 +334,7 @@ ul {
   border: solid white 2px;
   overflow: hidden;
   backdrop-filter: blur(8px);
-  transition: 2s;
+  transition: 1s;
   transition-timing-function: ease;
 }
 
@@ -371,7 +378,7 @@ tr:nth-child(even) {
   background-color: rgba(22, 22, 22, 0.616);
 }
 
-.more4, .more5 {
+.more4, .more6, .more5 {
   margin-top: 0;
   left: 91%;
   top: 2.5%;
@@ -380,7 +387,12 @@ tr:nth-child(even) {
 }
 
 .more5 {
-  left: 86%;
+  left: 83%;
+  top: 93%;
+}
+
+.more6 {
+  left: 3%;
   top: 93%;
 }
 
