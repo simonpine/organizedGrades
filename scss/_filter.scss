@@ -3,14 +3,14 @@
     min-height: 100vh;
 }
 .filtro{
-    top: 20px;
+    top: 5%;
     left: 20px;
     position: fixed;
 }
 .opener:after, .opener::before{
     position: absolute;
-    background-color:map-get($map:$colors,$key: 'secu');
-    border:2px solid map-get($map:$colors,$key: 'secu');
+    background-color:map-get($map:$colors,$key: 'deta');
+    border:2px solid map-get($map:$colors,$key: 'deta');
     height: 30px;
     width: 3px;
     content: "";
@@ -39,7 +39,7 @@
     background-color:map-get($map:$colors,$key: 't');
     width: 80px;
     height: 80px;
-    border:solid 3px map-get($map:$colors,$key: 'main');
+    border:solid 3px map-get($map:$colors,$key: 'deta');
     border-radius: 15px;
 }
 .container input {
@@ -68,7 +68,7 @@
 .ulFil{
     position: absolute;
     left: 15px;
-    margin-top: 100px;
+    top: 100px;
 }
 label{
     font-size: 20px;
@@ -78,9 +78,10 @@ input:checked ~ .checkmark {
     background-color: map-get($map:$colors,$key: 'deta');
 }
   .open{
+    
     border-radius: 15px;
     z-index: -10;
-    top: 20px;
+    top: 5%;
     left: 20px;
     position: fixed;
     backdrop-filter: blur(8px);
@@ -93,4 +94,27 @@ input:checked ~ .checkmark {
 }
 .open2{
     left: -250px;
+}
+.more2{
+    @extend .more1;
+    position: relative;
+    font-size: 18px;
+    left: 83px;
+    top: 20px;
+}
+.mainRe{
+    padding: 2%;
+    overflow: auto;
+    top: 5%;
+    position: absolute;
+    left: 12%;
+    backdrop-filter: blur(4px);
+    border-radius: 25px;
+    background-color:map-get($map:$colors,$key: 't');
+    width: 83%;
+    height: 80%;
+}
+.limit2{
+    @extend .limit;
+    height: 100%;
 }

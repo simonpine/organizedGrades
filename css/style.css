@@ -38,7 +38,7 @@ img {
 }
 
 .hM {
-  background-image: url(../img/2.jpg);
+  background-image: url(../img/6.jpg);
 }
 
 .contenidosF1 {
@@ -54,7 +54,7 @@ img {
 }
 
 .bodyResults {
-  background-image: url(../img/6.jpg);
+  background-image: url(../img/1.jpg);
 }
 
 #inicio {
@@ -97,7 +97,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.more, .more4, .more6, .more5, .more1 {
+.more, .more4, .more6, .more5, .more1, .more2 {
   margin-top: 20px;
   text-decoration: none;
   font-family: "Montserrat Alternates", sans-serif;
@@ -111,7 +111,7 @@ h1 {
   background-size: 0px 100%;
   transition: 0.5s;
 }
-.more:hover, .more4:hover, .more6:hover, .more5:hover, .more1:hover {
+.more:hover, .more4:hover, .more6:hover, .more5:hover, .more1:hover, .more2:hover {
   color: #2f2f2f;
   transition: 0.5s;
   background-size: 100% 100%;
@@ -318,7 +318,7 @@ li {
   width: 70px;
 }
 
-.more1 {
+.more1, .more2 {
   margin-top: 0;
   font-size: 25px;
   text-decoration: none;
@@ -347,17 +347,17 @@ li {
   display: none;
 }
 
-.limit {
+.limit, .limit2 {
   width: 100%;
   height: 80%;
   overflow: auto;
 }
 
-.limit::-webkit-scrollbar {
+.limit::-webkit-scrollbar, .limit2::-webkit-scrollbar {
   width: 10px;
 }
 
-.limit::-webkit-scrollbar-thumb {
+.limit::-webkit-scrollbar-thumb, .limit2::-webkit-scrollbar-thumb {
   background-color: white;
 }
 
@@ -415,15 +415,15 @@ th {
 }
 
 .filtro {
-  top: 20px;
+  top: 5%;
   left: 20px;
   position: fixed;
 }
 
 .opener:after, .opener::before {
   position: absolute;
-  background-color: white;
-  border: 2px solid white;
+  background-color: #00ffff;
+  border: 2px solid #00ffff;
   height: 30px;
   width: 3px;
   content: "";
@@ -457,7 +457,7 @@ th {
   background-color: rgba(47, 47, 47, 0.6156862745);
   width: 80px;
   height: 80px;
-  border: solid 3px #2f2f2f;
+  border: solid 3px #00ffff;
   border-radius: 15px;
 }
 
@@ -490,7 +490,7 @@ th {
 .ulFil {
   position: absolute;
   left: 15px;
-  margin-top: 100px;
+  top: 100px;
 }
 
 label {
@@ -505,7 +505,7 @@ input:checked ~ .checkmark {
 .open {
   border-radius: 15px;
   z-index: -10;
-  top: 20px;
+  top: 5%;
   left: 20px;
   position: fixed;
   backdrop-filter: blur(8px);
@@ -519,6 +519,30 @@ input:checked ~ .checkmark {
 
 .open2 {
   left: -250px;
+}
+
+.more2 {
+  position: relative;
+  font-size: 18px;
+  left: 83px;
+  top: 20px;
+}
+
+.mainRe {
+  padding: 2%;
+  overflow: auto;
+  top: 5%;
+  position: absolute;
+  left: 12%;
+  backdrop-filter: blur(4px);
+  border-radius: 25px;
+  background-color: rgba(47, 47, 47, 0.6156862745);
+  width: 83%;
+  height: 80%;
+}
+
+.limit2 {
+  height: 100%;
 }
 
 footer, .footer1 {

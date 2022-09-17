@@ -27,9 +27,11 @@ function initial(){
             canti[a] = 1
         }
     }
+    localStorage.setItem(`aprove`, numeroAprobar.value)
 }
 submit.addEventListener('click', get);//creo el evento cuando hacen click en el submit
-    function get(){
+function get(){
+    localStorage.clear()
     initial();
     console.log(canti); //lo que hizo de aqui pa atras fue recopilar los datos que habian en las secciones (numero de estudiantes, notas y con cuanto se aprueba) y los metio en 2 arrays
     const up = document.createElement("tr");//creo la primera fila de la lista, donde va a ir el numero del estudiante
@@ -81,10 +83,3 @@ function gradeSheet(){
 }
 
 //no e terminado, voy a hacer una tabla en otra pagina y que se pueda filtrar por quienes pasaron y quienes no, y quiero agregar mas cosas pero no se me ocurre que hacer
-
-// const aprobados = estudiantes.filter((a) => a.total >= numeroAprobar.value)//filtro a los estudiantes aprobados y desaprobados
-// const desaprobados = estudiantes.filter((b) => b.total < numeroAprobar.value)
-// console.log("Los estudiantes que aprobaron son: ")
-// console.table(aprobados)
-// console.log("Los estudiantes que no aprobaron son: ")
-// console.table(desaprobados)

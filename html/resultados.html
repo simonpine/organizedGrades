@@ -13,28 +13,37 @@
     <nav class="filtro">
         <button class="opener" id="fil"></button>
         <div class="open open2" id="select">
+            <li>
+                <button class="more2" id="submitFil">Filter</button>
+            </li>
             <ul class="ulFil">
                 <li>
                     <label class="container">All students
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" checked="checked" name="radio" value="1">
                         <span class="checkmark"></span>
                     </label>
                 </li>
                 <li>
-                    <label class="container">Aproove
-                        <input type="radio" name="radio">
+                    <label class="container">Approve
+                        <input type="radio" name="radio" value="2">
                         <span class="checkmark"></span>
                     </label>
                 </li>
                 <li>
-                    <label class="container">Not aproove
-                        <input type="radio" name="radio">
+                    <label class="container">Not approve
+                        <input type="radio" name="radio" value="3">
                         <span class="checkmark"></span>
                     </label>
                 </li>
             </ul>
         </div>
     </nav>
+    <main class="mainRe">
+        <div class="limit2">
+            <table id="insert">
+            </table>
+        </div>
+    </main>
     <script src="../js/result.js"></script>
 </body>
 </html>
