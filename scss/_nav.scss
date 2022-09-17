@@ -1,4 +1,4 @@
-nav{
+.nav{
     position: -webkit-sticky;
     position: sticky;
     margin-top: 200px;
@@ -11,7 +11,7 @@ nav{
 li{
     list-style:none;
 }
-ul{
+.ulNav{
     @include flex(column, center, space-evenly, center, wrap);
     height: 80%;
 }

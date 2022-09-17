@@ -13,9 +13,8 @@ submit.addEventListener('click', () => grades.classList.remove('out'))//Con el b
 close.addEventListener('click', () => {
     grades.classList.add('out');//con esta funcion hago que con el boton close se agregue devuelta la clase out a la tabla para que se esconda, y borro todo lo que estaba escrito en ella
     tr_th.innerHTML = ``;
-    estudiantes = []//ademas hago que caundo se cierra la tabla el array de estudiantes se vacie el array estudiantes el canti (cantidades iniciales), para que al salir y volver se reinicie el array
+    localStorage.clear()//ademas hago que caundo se cierra la tabla el array de estudiantes se vacie el array estudiantes el canti (cantidades iniciales), para que al salir y volver se reinicie el array
     canti = []
-    console.table(estudiantes)
 })
 let canti = []
 function initial(){
@@ -57,12 +56,11 @@ submit.addEventListener('click', get);//creo el evento cuando hacen click en el 
         }
     }
 }
-var estudiantes = [];
 class estudiante{
     constructor(name){
       this.nombre = name;//creo la maqueta para crear a cada estudiante de manera individual
       this.nota = [] //creo el array para poder meter facilmente las notas y sacar el promedio
-      this.total
+      this.total = 0
     }
 }
 let gG = document.querySelector("#generateGrades");
@@ -76,14 +74,10 @@ function gradeSheet(){
             const nota = document.querySelector(`#nota${x}estudiante${i}`);
             estudianteCreado.nota.push(Number(nota.value));
         }
-        estudiantes.push(estudianteCreado);
-
+        estudianteCreado.total = (estudianteCreado.nota.reduce((acumulador, elemento) => acumulador + elemento, 0)) / canti[2] //con esto se hace el promedio del estudiante
+        const estudianteJason = JSON.stringify(estudianteCreado);
+        localStorage.setItem(`Estudiante${i}`, estudianteJason)
     }
-    for (person of estudiantes){//Tambien se podria usar "for (let i = 0, i < estudiantes.lenght, i++)"
-        person.total = (person.nota.reduce((acumulador, elemento) => acumulador + elemento, 0)) / canti[2] //con esto se hace el promedio del estudiante
-    }
-    console.log("la lista de estudiantes es: ");
-    console.table(estudiantes); //y por ultimo se muestra la tabla de estudiantes
 }
 
 //no e terminado, voy a hacer una tabla en otra pagina y que se pueda filtrar por quienes pasaron y quienes no, y quiero agregar mas cosas pero no se me ocurre que hacer

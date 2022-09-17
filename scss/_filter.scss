@@ -1,0 +1,96 @@
+.bodyResults{
+    min-width: 100%;
+    min-height: 100vh;
+}
+.filtro{
+    top: 20px;
+    left: 20px;
+    position: fixed;
+}
+.opener:after, .opener::before{
+    position: absolute;
+    background-color:map-get($map:$colors,$key: 'secu');
+    border:2px solid map-get($map:$colors,$key: 'secu');
+    height: 30px;
+    width: 3px;
+    content: "";
+    left: 43%;
+    transition: 0.7s;
+    transition-timing-function: ease;
+}
+.opener:before{
+    transform: rotate(90deg);
+    top: 6px;
+}
+.opener:after{
+    transform: rotate(-90deg);
+    top: 30px;
+}
+.openerClose:before{
+    transform: rotate(45deg);
+    top: 18px;
+}
+.openerClose:after{
+    transform: rotate(-45deg);
+    top: 18px;
+}
+.opener{
+    backdrop-filter: blur(8px);
+    background-color:map-get($map:$colors,$key: 't');
+    width: 80px;
+    height: 80px;
+    border:solid 3px map-get($map:$colors,$key: 'main');
+    border-radius: 15px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+  }
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: map-get($map:$colors,$key: 't');
+    border-radius: 50%;
+}
+.ulFil{
+    position: absolute;
+    left: 15px;
+    margin-top: 100px;
+}
+label{
+    font-size: 20px;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+input:checked ~ .checkmark {
+    background-color: map-get($map:$colors,$key: 'deta');
+}
+  .open{
+    border-radius: 15px;
+    z-index: -10;
+    top: 20px;
+    left: 20px;
+    position: fixed;
+    backdrop-filter: blur(8px);
+    border:3px solid map-get($map:$colors,$key: 'main');
+    width: 200px;
+    height: 230px;
+    background-color:map-get($map:$colors,$key: 't');
+    transition: 1s;
+    transition-timing-function: ease;
+}
+.open2{
+    left: -250px;
+}
