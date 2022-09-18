@@ -415,49 +415,56 @@ th {
 }
 
 .filtro {
-  top: 5%;
-  left: 20px;
+  top: 6%;
+  left: 5.5%;
   position: fixed;
+  z-index: 10;
 }
 
 .opener:after, .opener::before {
   position: absolute;
   background-color: #00ffff;
   border: 2px solid #00ffff;
-  height: 30px;
-  width: 3px;
+  height: 27px;
+  width: 2px;
   content: "";
   left: 43%;
   transition: 0.7s;
   transition-timing-function: ease;
+  transition-delay: 1s, 1s, 0s;
+  transition-property: top, bottom, transform;
 }
 
 .opener:before {
   transform: rotate(90deg);
-  top: 6px;
+  top: 2px;
 }
 
 .opener:after {
   transform: rotate(-90deg);
-  top: 30px;
+  bottom: 2px;
 }
 
 .openerClose:before {
   transform: rotate(45deg);
-  top: 18px;
+  top: 13px;
+  transition-property: top, transform;
+  transition-delay: 0s, 1s;
 }
 
 .openerClose:after {
   transform: rotate(-45deg);
-  top: 18px;
+  bottom: 13px;
+  transition-property: bottom, transform;
+  transition-delay: 0s, 1s;
 }
 
 .opener {
   backdrop-filter: blur(8px);
   background-color: rgba(47, 47, 47, 0.6156862745);
-  width: 80px;
-  height: 80px;
-  border: solid 3px #00ffff;
+  width: 60px;
+  height: 60px;
+  border: solid 1.5px #00ffff;
   border-radius: 15px;
 }
 
@@ -483,7 +490,7 @@ th {
   left: 0;
   height: 25px;
   width: 25px;
-  background-color: rgba(47, 47, 47, 0.6156862745);
+  background-color: rgba(22, 22, 22, 0.616);
   border-radius: 50%;
 }
 
@@ -503,29 +510,35 @@ input:checked ~ .checkmark {
 }
 
 .open {
+  overflow: hidden;
   border-radius: 15px;
   z-index: -10;
-  top: 5%;
-  left: 20px;
+  top: 6%;
+  left: 5.5%;
   position: fixed;
   backdrop-filter: blur(8px);
-  border: 3px solid #2f2f2f;
+  border: 1px solid white;
   width: 200px;
   height: 230px;
   background-color: rgba(47, 47, 47, 0.6156862745);
   transition: 1s;
   transition-timing-function: ease;
+  transition-delay: 0s, 1s;
+  transition-property: width, height;
 }
 
 .open2 {
-  left: -250px;
+  height: 58px;
+  width: 55px;
+  transition-delay: 1s, 0s;
+  transition-property: width, height;
 }
 
 .more2 {
   position: relative;
   font-size: 18px;
-  left: 83px;
-  top: 20px;
+  left: 75px;
+  top: 13px;
 }
 
 .mainRe {
@@ -533,11 +546,11 @@ input:checked ~ .checkmark {
   overflow: auto;
   top: 5%;
   position: absolute;
-  left: 12%;
+  left: 5%;
   backdrop-filter: blur(4px);
   border-radius: 25px;
   background-color: rgba(47, 47, 47, 0.6156862745);
-  width: 83%;
+  width: 86%;
   height: 80%;
 }
 
