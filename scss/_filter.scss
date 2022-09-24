@@ -4,7 +4,7 @@
 }
 .filtro{
     top: 6%;
-    left: 5.5%;
+    left: 5%;
     position: fixed;
     z-index: 10;
 }
@@ -46,7 +46,7 @@
     background-color:map-get($map:$colors,$key: 't');
     width: 60px;
     height: 60px;
-    border:solid 1.5px map-get($map:$colors,$key: 'deta');
+    border:solid 1.5px map-get($map:$colors,$key: 'secu');
     border-radius: 15px;
 }
 .container input {
@@ -89,7 +89,7 @@ input:checked ~ .checkmark {
     border-radius: 15px;
     z-index: -10;
     top: 6%;
-    left: 5.5%;
+    left: 5%;
     position: fixed;
     backdrop-filter: blur(8px);
     border:1px solid map-get($map:$colors,$key: 'secu');
@@ -117,16 +117,56 @@ input:checked ~ .checkmark {
 .mainRe{
     padding: 2%;
     overflow: auto;
-    top: 5%;
+    top: 15%;
     position: absolute;
     left: 5%;
     backdrop-filter: blur(4px);
     border-radius: 25px;
     background-color:map-get($map:$colors,$key: 't');
     width: 86%;
-    height: 80%;
+    height: 70%;
 }
 .limit2{
     @extend .limit;
     height: 100%;
+}
+.filterInput{
+    font-size: 20px;
+    backdrop-filter: blur(8px);
+    top: 6%;
+    border-radius: 10px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    border: none;
+    background-color:map-get($map:$colors,$key: 't');
+    position: absolute;
+    left: 9%;
+    height: 40px;
+    padding: 10px 4% 10px 4%;
+    width: 78%;
+    &::placeholder{
+        font-size: 20px;
+        color: map-get($map:$colors,$key: 'secut');
+    }
+    transition: 1s;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+    
+}
+.filterInputOpen{
+    left: 16%;
+    width: 71%;
+    transition-delay: 0s;
+}
+.Toastify__toast-container {
+    width: 100%;
+    height: 100%;
+}
+.tos{
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    background:  map-get($map:$colors,$key: 't');
+    border: 1px solid map-get($map:$colors,$key: 'secu');
+    color: map-get($map:$colors,$key: 'secu');
 }
