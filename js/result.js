@@ -141,7 +141,7 @@ const submitFil = document.querySelector('#submitFil');
 const options = document.querySelectorAll('input[name="radio"]');
 submitFil.addEventListener('click', () => {
       Toastify({
-        text: `The template has been leaked to`,
+        text: `The template has been leaked`,
         gravity: "bottom",
         positionLeft: false,
         className: 'tos'
