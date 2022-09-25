@@ -232,6 +232,9 @@ p {
   background: none;
   border: 1px solid white;
 }
+.input1{
+  border: none;
+}
 
 .tituloMini {
   width: 80%;

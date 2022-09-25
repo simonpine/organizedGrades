@@ -3,7 +3,6 @@ let select = document.querySelector("#select");
 let aprove = localStorage.getItem('aprove'); //tambien me traigo la informacion de con cuanto se aprueva desde el localstorage
 const insert = document.querySelector('#insert');
 const nameFilter = document.querySelector('#nameFilter');
-
 opener.addEventListener('click', () => { //creo el evento en donde cuando presiono el boton del menu se despliega o se quita dependiendo de su estado
     if (opener.classList == ('opener openerClose')) {
         opener.classList.remove('openerClose')
