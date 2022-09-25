@@ -3,7 +3,7 @@ let select = document.querySelector("#select");
 let aprove = localStorage.getItem('aprove'); //tambien me traigo la informacion de con cuanto se aprueva desde el localstorage
 const insert = document.querySelector('#insert');
 const nameFilter = document.querySelector('#nameFilter');
-localStorage.removeItem('aprove');
+
 opener.addEventListener('click', () => { //creo el evento en donde cuando presiono el boton del menu se despliega o se quita dependiendo de su estado
     if (opener.classList == ('opener openerClose')) {
         opener.classList.remove('openerClose')
@@ -21,7 +21,7 @@ opener.addEventListener('click', () => { //creo el evento en donde cuando presio
     }
 })
 const list = []; //creo el array en donde se pondran todos los estudiantes
-for (let i = 0; i < localStorage.length; i++) { //ahora hago que por cada objeto del localStorage el objeto se pase a formato NO JASON y lo agregue a la lista
+for (let i = 0; i < (localStorage.length - 1); i++) { //ahora hago que por cada objeto del localStorage el objeto se pase a formato NO JASON y lo agregue a la lista
     let newEstudentJason = localStorage.getItem(`Estudiante${i}`)
     let newEstudent = JSON.parse(newEstudentJason)
     list.push(newEstudent)
@@ -140,12 +140,6 @@ function yes() {
 const submitFil = document.querySelector('#submitFil');
 const options = document.querySelectorAll('input[name="radio"]');
 submitFil.addEventListener('click', () => {
-      Toastify({
-        text: `The template has been leaked`,
-        gravity: "bottom",
-        positionLeft: false,
-        className: 'tos'
-      }).showToast();
     insert.innerHTML = ''
     let selected;
     for (const option of options) { // mira cada radio y cuando encuentra el que esta seleccionado le da su valor a "selected" y rompe el ciclo
@@ -156,41 +150,55 @@ submitFil.addEventListener('click', () => {
     }
     console.log(selected)
     if (selected == 1) {
+        Toastify({
+            text: `The spreadsheet has been filtered to all students`,
+            gravity: "bottom",
+            positionLeft: false,
+            className: 'tos'
+          }).showToast();
         all();
     }
     else if (selected == 2) {
+        Toastify({
+            text: `The spreadsheet has been filtered to students who pass`,
+            gravity: "bottom",
+            positionLeft: false,
+            className: 'tos'
+          }).showToast();
         yes();
     }
     else {
+        Toastify({
+            text: `The spreadsheet has been filtered to students who did not pass`,
+            gravity: "bottom",
+            positionLeft: false,
+            className: 'tos'
+          }).showToast();
         not();
     }
 })
 // ------------------------------------------------------------Ahora creo el filtro para nombres------------------------------------------------------- //
-nameFilter.addEventListener('keyup', () => { 
+nameFilter.addEventListener('keyup', () => { //Genero que esta funcion se aplique siempre que se escriba algo en el input 'Filter by student's name'
     insert.innerHTML = ''
-    const nameFilter = document.querySelector('#nameFilter');
-    if (nameFilter.value != ''){
+    const nameFilter = document.querySelector('#nameFilter'); //cada ves que se teclea reviza que hay escrito ahi
+    if (nameFilter.value != ''){ //verifica que no este vacio, si esta vacio muestra a todos
         const up = document.createElement("tr");
-        const nombres = document.createElement("tr");//se salta a todos los que no aprobaron
+        const nombres = document.createElement("tr");
         up.innerHTML = `<th></th>`;
         nombres.innerHTML = `<th>Name</th>`;
-        for (est of list) {
-            if (est.nombre.toLowerCase().includes(nameFilter.value.toLowerCase())) {
-                one(up, nombres);
-            }
+        for (est of list) { //hace un mapeo de cada estudante de la lista
+            (est.nombre.toLowerCase().includes(nameFilter.value.toLowerCase())) && one(up, nombres); //si se cumple crea el th para su nombre, sino no hace nada
         }
         for (let i = 0; i < list[0].nota.length; i++) {
             const numeroNota = document.createElement("tr");
             numeroNota.innerHTML = `<th>Grade ${i}</th>`
     
             for (let x = 0; x < list.length; x++) {
-                if (list[x].nombre.toLowerCase().includes(nameFilter.value.toLowerCase())) {
-                    two(x, i, numeroNota);
-                }
+                (list[x].nombre.toLowerCase().includes(nameFilter.value.toLowerCase())) && two(x, i, numeroNota); //ahora solo coloca la nota si ese estudiante cumple con el condicional del nombre
             }
         }
         const down = document.createElement("tr");
-        down.innerHTML = insert.innerHTML == ""? `<th>Empty</th>`: `<th>Total</th>`;
+        down.innerHTML = insert.innerHTML == ""? `<th>Empty</th>`: `<th>Total</th>`; // revisa si anteriormente algun estudiante cumplio con los requisitos (si el "insert" esta vacio nadio lo cumplio), sino coloca que la tabla esta vacia
         for (est of list) {
             if (est.nombre.toLowerCase().includes(nameFilter.value.toLowerCase())) {
                 const d = document.createElement("td");
