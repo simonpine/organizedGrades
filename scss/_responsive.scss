@@ -1,0 +1,120 @@
+@media screen and (max-width: 1600px){
+    .filterInput{
+        left: 12%;
+        width: 75%;
+    }
+    .filterInputOpen{
+        left: 22%;
+        width: 65%;
+    }
+}
+@media screen and (max-width: 1100px){
+    #inicio{
+        width: 90%;
+    }
+    h1{
+        font-size: 6vh;
+    }
+    #logo{
+        height: 40%;
+    }
+    footer{
+        width: 90%;
+    }
+    .footer1{
+        width: 100%;
+    }
+    .more1{
+        padding: 3px 13px;
+    }
+    .contenidos{
+        margin: 5%;
+        width: 90%;
+    }
+    .nav{
+        backdrop-filter: blur(10px);
+        top: 10px;
+        z-index: 10;
+        height: 80px;
+        flex-direction: row;
+        margin: 4%;
+        width: 90%;
+        background-color: map-get($map:$colors, $key: 'dark');
+        border-radius: 10px;
+        padding: 1%;
+    }
+    .ulNav{
+        width: 80%;
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 840px){
+    .filterInput{
+        left: 20%;
+        width: 67%;
+    }
+    #logoNav{
+        display: none;
+    }
+    .nav{
+        height: auto;
+        flex-direction: column;
+    }
+    .ulNav{
+        width: 100%;
+    }
+    .blur, .blur1, .blur2{
+        width: auto;
+    }
+    .table{
+        left: 2.5vw;
+        top:2.5vh;
+        width: 95vw;
+        height: 95vh;
+    }
+    .out{
+        top: -100vh;
+    }
+    .mainRe{
+        height: 76vh;
+    }
+}
+@media screen and (max-width: 660px){
+    #inicio{
+        min-height: 90%;
+        flex-direction: column-reverse;
+    }
+    .t_link{
+        width: 80%;
+        height: auto;
+    }
+    #logo{
+        height: auto;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 430px){
+    p{
+        height: auto;
+        font-weight: 800;
+        font-size: 3vh;
+    }
+    .contenidos{
+        border-radius: 10px;
+        margin: 0px;
+        margin-bottom: 60px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 5vh;
+    }
+    footer{
+        min-height: 40vh;
+        width: 90%;
+    }
+    #redes_sociales{
+        width: 90%;
+    }
+}

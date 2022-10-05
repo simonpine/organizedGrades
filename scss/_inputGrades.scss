@@ -9,6 +9,8 @@
     border:solid map-get($map:$colors,$key: 'secu') 2px;
     overflow: hidden;
     @extend.blur;
+    margin: 0px;
+    padding: 0px;
     backdrop-filter: blur(8px);
     transition: 1s;
     transition-timing-function: ease;
@@ -67,7 +69,7 @@ tr:nth-child(even) {
     top: 93%;
   }
   .out{
-    top: -100vh;
+    top: -150vh;
     position:fixed;
 }
 th{

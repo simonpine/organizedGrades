@@ -1,18 +1,18 @@
 .mainLet{
     width: 100%;
     @include flex(row, space-around, flex-end, center, wrap);
-    height: 300vh;
+    min-height: 300vh;
 }
 .subtitulo{
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 27px;
+    font-size: 3.2vh;
     font-weight: 300;
     text-align:left;
     text-transform:capitalize;
 }
 .hM{
     @include flex(row, center, space-evenly, center, wrap);
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 .sub_t{
@@ -20,19 +20,22 @@
 }
 
 .logoS{
-    width: 150px;
+    height: 20vh;
+    width: auto;
 }
 .blur{
     background-color: map-get($map:$colors, $key: 't');
     backdrop-filter: blur(4px);
-    width: 400px;
-    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    min-width: 40vh;
+    min-height: 40vh;
     border-radius: 25px;
     @include flex(column-reverse, space-evenly, space-evenly, center, wrap);
 }
 .blur1{
     @extend .blur;
-    width: 800px;
+    width: 50%;
 }
 .blur2{
     @extend .blur;
@@ -41,27 +44,28 @@
     @include flex(column-reverse, center, center, center, wrap);
 }
 p{
+    height: auto;
     text-align: justify;
-    width: 70%;
-    font-size: 33px;
+    max-width: 70%;
+    font-size: 4vh;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 .contenidos{
     margin-right: 10px;
     width: 77vw;
-    height: 70vh;
+    min-height: 70vh;
     border-radius: 25px;
-    @include flex(column-reverse, space-evenly, space-evenly, center, wrap);
+    @include flex(row, space-evenly, space-evenly, center, wrap);
 }
 #aprove{
     background-color: rgb(100, 100, 78);
 }
 .input{
     font-family: 'Exo 2', sans-serif;
-    font-size: 20px;
+    font-size: 2.5vh;
     padding: 10px 20px 10px 20px;
     height: 20px;
-    width: 300px;
+    width: 70%;
     margin-top: 50px;
     background: none;
     border: 1px solid map-get($map:$colors, $key: 'secu');
@@ -71,7 +75,7 @@ p{
     font-family: 'Exo 2', sans-serif;
     text-transform:uppercase;
     font-weight: 300;
-    font-size: 38px;
+    font-size: 4vh;
     text-align: justify;
 }
 td{
@@ -79,6 +83,7 @@ td{
 }
 .input1{
     @extend .input;
+    border: none;
     margin-top: 0;
     padding: 3% 10% 3% 10%;
     height: 80%;

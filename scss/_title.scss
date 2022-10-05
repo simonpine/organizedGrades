@@ -8,27 +8,28 @@
 }
 #logo{
     transition: 0.5s;
-    width: 350px;
+    height: 50%;
+    width: auto;
     &:hover{
         transform: rotate(30deg);
 }
 }
 h1{
     font-family: 'Exo 2', sans-serif;
-    font-size: 55px;
+    font-size: 7vh;
     text-align:left;
     text-transform: uppercase;
 }
 .t_link{
     height: 100%;
-    width: 32%;
+    width: 40%;
     @include flex(column, center, center, start, wrap);
 }
 .more{
     margin-top: 20px;
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 20px;
+    font-size: 2vh;
     font-weight: 700;
     padding: 5px 20px 5px 20px;
     border:solid 1px map-get($map:$colors,$key: 'secu');

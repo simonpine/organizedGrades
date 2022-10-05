@@ -16,7 +16,7 @@ li{
     height: 80%;
 }
 .navText{
-    font-size: 30px;
+    font-size: 3vh;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     text-transform:uppercase;
@@ -32,12 +32,13 @@ li{
     }
 }
 #logoNav{
-    width: 70px;
+    width: auto;
+    height: 7vh;
 }
 .more1{
-    @extend .more;
+    @extend .more;  
     margin-top:0;
-    font-size: 25px;
+    font-size: 3vh;
     text-decoration: none;
     font-family: 'Exo 2', sans-serif;
     text-transform:uppercase;
