@@ -637,7 +637,7 @@ footer img, .footer1 img {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 25%;
+  min-width: 19%;
 }
 
 #copy {

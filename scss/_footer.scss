@@ -14,7 +14,7 @@ footer{
 }
 #redes_sociales{
     @include flex(row, space-around, space-between, center, wrap);
-    width: 25%;
+    min-width: 19%;
 }
 
 #copy{
@@ -22,7 +22,7 @@ footer{
 }
 .iconos_footer2{
     height: 4vh;
-    width: auto;
+    width : auto;
     vertical-align:middle;
 }
 .footerScript{
