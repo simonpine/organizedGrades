@@ -8,9 +8,16 @@ let close = document.querySelector("#close");
 let grades = document.querySelector("#inputGrades");
 let tr_th = document.querySelector("#tr_th");
 let tr = document.querySelector("tr");
+let Gg = document.querySelector("#generateGrades");
 
-submit.addEventListener('click', () => grades.classList.remove('out'))//Con el boton submit quito la clase out para que la tabla se vea
+submit.addEventListener('click', () => {
+    grades.classList.remove('out')
+    close.classList.remove('out2')
+    Gg.classList.remove('out2')
+})//Con el boton submit quito la clase out para que la tabla se vea
 close.addEventListener('click', () => {
+    close.classList.add('out2');
+    Gg.classList.add('out2');
     grades.classList.add('out');//con esta funcion hago que con el boton close se agregue devuelta la clase out a la tabla para que se esconda, y borro todo lo que estaba escrito en ella
     tr_th.innerHTML = ``;
     localStorage.clear()//ademas hago que caundo se cierra la tabla el array de estudiantes se vacie el array estudiantes el canti (cantidades iniciales), para que al salir y volver se reinicie el array

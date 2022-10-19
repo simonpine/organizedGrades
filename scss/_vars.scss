@@ -37,3 +37,6 @@ img{
     height: 100vh;
     @include flex(row-reverse, space-around, space-around, center, wrap);
 }
+.out2{
+    display: none;
+}
