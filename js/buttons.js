@@ -48,7 +48,7 @@ function get() {
     for (let i = 0; i < canti[1]; i++) { //bucle que se repite por cada estudiante, este defina la cantidad de columnas que hay
         const a = document.createElement("th"); //los titulos de las filas
         const b = document.createElement("td"); //los inputs, que van a ser nombres
-        a.innerHTML = `Estudent ${i}`
+        a.innerHTML = `Student ${i}`
         b.innerHTML = `<input type="text" class="input1" id="nombre${i}" placeholder="Name"></input>`
         up.append(a);
         nombres.append(b);
