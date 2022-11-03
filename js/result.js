@@ -31,7 +31,7 @@ console.log(list)
 function one(up, nombres) {
     const a = document.createElement("th");
     const b = document.createElement("td");
-    a.innerHTML = `Estudent ${list.indexOf(est)}`
+    a.innerHTML = `Student ${list.indexOf(est)}`
     b.innerHTML = `${est.nombre}`
     up.append(a);
     nombres.append(b);
