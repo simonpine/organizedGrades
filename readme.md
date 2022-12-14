@@ -30,6 +30,7 @@ The required, number the students, number of grades, and the grade to pass, with
 
 - https://twitter.com/SimonPine2
 - simonpineda0521@gmail.com
+- https://www.linkedin.com/in/simon-pineda-0b8abb251
 
 ## Folder Structure
 
