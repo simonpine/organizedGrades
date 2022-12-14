@@ -1,34 +1,25 @@
-# SimonPine - Design
+# Organized grades
 
-E-commerce simulator builded with React.js and Firestore.
+A grade sheet creator made with javaScript
 
 ## Deploy
 
-[oritsuru.netlify.app](https://simonpine-design.netlify.app/)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a253097a-2925-4d33-bb21-7eb6cf663ab0/deploy-status)](https://app.netlify.com/sites/simonpine-design/deploys)
+[oritsuru.netlify.app](https://organized-grades.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a253097a-2925-4d33-bb21-7eb6cf663ab0/deploy-status)](https://app.netlify.com/sites/organized-grades/deploys)
 
 ## Description
 
-The e-commerce is divided in 5 pages, home, store, about, cart and order.
-- Home: Present the project and show 3 random items from the store (from firebase).
-- About: It is only filler and does not contribute anything.
-- Store: Is where the items are shown and can be filter by price, name, company and category.
-- Cart: Is where the items that the user are going to buy are shown (works with localStorage), there the user can add and remove items, and see the price in real time. - Also is where the user acces to the checkout.
-- Order: After the user generates a purchase, he gets a code that can be used to see the details of that order.
+The required, number the students, number of grades, and the grade to pass, with it the app create a grade sheet that the teacher have to fill, for later show the final grade in another grade sheet, that can be filter by name of the student, and if the student pass or not.
 
 ## Libraries
 
-- [Create React App][cra] - Project setup
-- [React Router][router] - Routing and navigation
+- [sass] - Project styles
+- [tos] - Show the filter action
 
 ## Scripts
 
-- `npm start`
-    Start the project in the development enviroment.
-- `npm build`
-    Build the project for production.
-- `npm test`
-    Start the project and run tests.
+- `npm sass watch:start`
+    Start sass.
 
 ## Prerequisites
 
@@ -42,14 +33,14 @@ The e-commerce is divided in 5 pages, home, store, about, cart and order.
 
 ## Folder Structure
 
-- `src`: Contains all the source code.
-    - `components`: General components used across the app.
-    - `views`: Specific components organized by view.
-    - `context`: React context providers.
-- `App.js`: Main component.
+- `scss`: Contains all style code.
+- `html`: Contains all the views.
+- `js`: Contains all the codes that make this app work.
+    - 'buttons.js': Contains the input functions.
+    - 'result.js': Contains the render of the last grade sheet, and the filter.
 
 [deploy]: https://simonpine-design.netlify.app/
 [status]: https://api.netlify.com/api/v1/badges/a253097a-2925-4d33-bb21-7eb6cf663ab0/deploy-status
 [netlify]: https://app.netlify.com/sites/simonpine-design/deploys
-[cra]: https://github.com/facebook/create-react-app
-[router]: https://github.com/remix-run/react-router
+[sass]: https://sass-lang.com/
+[tos]: https://apvarun.github.io/toastify-js/
