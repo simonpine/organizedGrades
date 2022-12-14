@@ -37,8 +37,8 @@ The required, number the students, number of grades, and the grade to pass, with
 - `scss`: Contains all style code.
 - `html`: Contains all the views.
 - `js`: Contains all the codes that make this app work.
-    - 'buttons.js': Contains the input functions.
-    - 'result.js': Contains the render of the last grade sheet, and the filter.
+    - `buttons.js`: Contains the input functions.
+    - `result.js`: Contains the render of the last grade sheet, and the filter.
 
 [deploy]: https://simonpine-design.netlify.app/
 [status]: https://api.netlify.com/api/v1/badges/a253097a-2925-4d33-bb21-7eb6cf663ab0/deploy-status
